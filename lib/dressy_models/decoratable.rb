@@ -7,6 +7,14 @@ module DressyModels
       decorator_class(variant).new self
     end
 
+    def decorator_class(variant = nil)
+      self.class.decorator_class variant
+    end
+
+    def decorator_name(variant = nil)
+      self.class.decorator_name variant
+    end
+
     class_methods do
       def decorator_class(variant = nil)
         decorator_name(variant).constantize
@@ -17,10 +25,6 @@ module DressyModels
         result += "::#{variant.to_s.camelcase}" unless variant.nil?
         result += 'Decorator'
         result
-      end
-
-      def ===(other)
-        super other.undecorate
       end
     end
   end

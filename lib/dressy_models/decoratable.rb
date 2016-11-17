@@ -13,7 +13,7 @@ module DressyModels
       end
 
       def decorator_name(variant = nil)
-        result  = model_name.to_s
+        result  = (respond_to?(:model_name) ? model_name : name).to_s
         result += "::#{variant.to_s.camelcase}" unless variant.nil?
         result += 'Decorator'
         result

@@ -18,6 +18,10 @@ module DressyModels
         result += 'Decorator'
         result
       end
+
+      def ===(other)
+        super other.undecorate
+      end
     end
   end
 end

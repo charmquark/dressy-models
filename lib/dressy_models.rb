@@ -1,4 +1,5 @@
 require 'dressy_models/core_ext'
+require 'dressy_models/decoratable'
 require 'dressy_models/decorator'
 
 require 'dressy_models/railtie' if defined?(Rails)

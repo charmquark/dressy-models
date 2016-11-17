@@ -18,3 +18,8 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActiveSupport::TestCase.file_fixture_path = ActiveSupport::TestCase.fixture_path + "/files"
   ActiveSupport::TestCase.fixtures :all
 end
+
+def assert_respond_with(obj, method, value)
+  assert_respond_to obj, method
+  assert_equal value, obj.__send__(method)
+end

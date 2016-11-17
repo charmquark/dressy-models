@@ -1,18 +1,17 @@
-$:.push File.expand_path("../lib", __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 # Maintain your gem's version:
-require "dressy_models/version"
+require 'dressy_models/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "dressy_models"
+  s.name        = 'dressy_models'
   s.version     = DressyModels::VERSION
   s.authors     = ['charmquark']
   s.email       = ['ibisbasenji@gmail.com']
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of DressyModels."
-  s.description = "TODO: Description of DressyModels."
-  s.license     = "MIT"
+  s.homepage    = 'https://github.com/csauls/dressy-models'
+  s.summary     = 'A clean take on Rails model decorators.'
+  s.license     = 'MIT'
 
   s.files = Dir[
     '{app,config,db,lib}/**/*',
@@ -21,7 +20,7 @@ Gem::Specification.new do |s|
     'README.md'
   ]
 
-  s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
+  s.add_dependency 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'sqlite3'
 end
